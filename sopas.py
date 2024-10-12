@@ -6,6 +6,7 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.platypus import Table, TableStyle
 from reportlab.lib.units import cm
+import sys
 
 def leer_palabras(archivo):
     """Lee palabras desde un archivo txt, una por línea."""
@@ -20,6 +21,7 @@ def generar_sopa(palabras, tam_grilla):
     """Genera la sopa de letras colocando las palabras en distintas direcciones."""
     grilla = [['' for _ in range(tam_grilla)] for _ in range(tam_grilla)]
     
+    #SETEAR DIFICULTAD agregando o quitando direcciones de las palabras
     direcciones = [
         'horizontal', 
         'horizontal_inverso', 
@@ -181,12 +183,20 @@ def ajustar_lista_palabras(palabras, cantidad):
         # Devolvemos exactamente la cantidad solicitada
         return palabras_repetidas[:cantidad]
 #--------------MAIN (CONFIGURACION)-------------------
-def main(archivo_palabras='list.txt', tam_grilla=20, palabras_por_hoja=20,pdf_salida='sopa_de_letras.pdf'):
+def main(archivo_palabras='list.txt', tam_grilla=20, palabras_por_hoja=20,pdf_salida='sopa_de_letras.pdf', cant_palabras=0):
     #----CONFIG------
     tam_grilla=27
     #palabras_por_hoja=20
     # pdf_salida='sopa_de_letras.pdf'
     cant_palabras = 400 #0: toma la lista tal cual, otro numero si es necesario repite
+
+    #----parametros externos
+    args = sys.argv
+    archivo_palabras = args[1] if args[1] else archivo_palabras
+    tam_grilla = int(args[2]) if args[2] else tam_grilla
+    palabras_por_hoja = int(args[3]) if args[3] else palabras_por_hoja
+    pdf_salida = args[4] if args[4] else pdf_salida
+    print(args)
 
     palabras = leer_palabras(archivo_palabras)
     palabras = ajustar_lista_palabras(palabras, cant_palabras)
