@@ -11,7 +11,7 @@
 
 Este proyecto está inspirado en mi abuela, que al día del primer commit tiene 90 años. Durante muchos años ha disfrutado de resolver sopas de letras, y esta actividad ha sido clave para mantener su mente activa y su bienestar cognitivo. Para ella, resolver sopas de letras es casi una forma de meditación, una práctica que le ayuda a mantenerse presente en el momento y disfrutar del ahora.
 
-![Captura de pantalla_2024-10-12_15-25-34.png](/screenshots/Captura_de_pantalla_2024-10-12_15-25-34.png)
+![Captura_de_pantalla_2024-10-12_22-23-22.png](/screenshots/Captura_de_pantalla_2024-10-12_22-23-22.png)
 
 > [!NOTE]
 >El título del proyecto fue generado con arte ASCII en [patorjk.com](https://patorjk.com/software/taag/#p=display&f=Bulbhead&t=Sopas%20de%20la%20Abuela) usando la fuente "Bulbhead".
@@ -57,7 +57,7 @@ Puedes ejecutar la aplicación desde la línea de comandos. El programa toma un 
 
 ### Comandos básicos
 ```bash
-python sopas_abuela.py [archivo_palabras.txt] [tam_grilla] [cantidad_palabras] [pdf_salida] [cant_palabras]
+python sopas_abuela.py [archivo_palabras.txt] [tam_grilla] [cantidad_palabras] [pdf_salida] [cant_palabras] [en_columnas]
 ```
 
 
@@ -66,6 +66,7 @@ python sopas_abuela.py [archivo_palabras.txt] [tam_grilla] [cantidad_palabras] [
 - `cantidad_palabras`: Número de palabras que se desean en la sopa de letras. Si es 0, usará todas las palabras de la lista. Si es un numero mayor a la cantidad de la lista repetira las primeras.
 - `pdf_salida`: Nombre del archivo de salida
 - `cant_palabras` : Este numero determina cuantas palabras se van a utilizar, si se deja en 0, se toman todas las palabras de la lista, si se elije un numero menor se corta la lista, pero si se elije un numero mayor la lista continua desde el principio tanto como sea necesario.
+- `en_columnas`: `True` = Muestra las referencias en columnas `False`:las muestra en parrafo (util para palabras largas que se tocan entre columnas)
 
 
 ### Ejemplo de uso
@@ -138,7 +139,7 @@ Cada página del PDF generado contiene:
 Este proyecto fue creado por [Sergio Silvstri](https://github.com/neocronos666) con amor y dedicación pensando en mi abuela, quien a sus 90 años sigue resolviendo sopas de letras como una forma de mantenerse mentalmente activa y presente en el momento. Para ella, estas sopas son más que un pasatiempo; son una manera de meditar y disfrutar del ahora.
 
 # :muscle: Creditos a terceros
-- >El título del proyecto fue generado con arte ASCII en [patorjk.com](https://patorjk.com/software/taag/#p=display&f=Bulbhead&t=Sopas%20de%20la%20Abuela) usando la fuente "Bulbhead".
+- El título del proyecto fue generado con arte ASCII en [patorjk.com](https://patorjk.com/software/taag/#p=display&f=Bulbhead&t=Sopas%20de%20la%20Abuela) usando la fuente "Bulbhead".
 - La lista `castellano.txt`la tomé prestada de [elcastellano.org](https://www.elcastellano.org/lista_alfabetica)
 - Las listas `campo.txt`, `memorias.txt`, `naturaleza.txt` y `varios.txt` las generé usando ChatGPT4.o.
 
