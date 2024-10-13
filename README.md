@@ -13,10 +13,6 @@ Este proyecto está inspirado en mi abuela, que al día del primer commit tiene 
 
 ![Captura_de_pantalla_2024-10-12_22-23-22.png](/screenshots/Captura_de_pantalla_2024-10-12_22-23-22.png)
 
-> [!NOTE]
->El título del proyecto fue generado con arte ASCII en [patorjk.com](https://patorjk.com/software/taag/#p=display&f=Bulbhead&t=Sopas%20de%20la%20Abuela) usando la fuente "Bulbhead".
-
-
 
 ## :bulb: Características
 - Generación automática de sopas de letras a partir de un archivo .txt.
@@ -118,11 +114,15 @@ Puede editarla o comentyarla para que hayan menos direcicones en las que aparece
 Debería buscar la funcion main para setear los ajustes por defecto:
 ```python
 def main(archivo_palabras='list.txt', tam_grilla=20, palabras_por_hoja=20,pdf_salida='sopa_de_letras.pdf', cant_palabras=0):
-    #----CONFIG------
-    tam_grilla=27
-    palabras_por_hoja=20
-    pdf_salida='salida.pdf'
-    cant_palabras = 400 
+     # ===============CONFIGURACION==============================
+    archivo_palabras = './lists/varios.txt'
+    tam_grilla = 32 
+    palabras_por_hoja = 40 
+    pdf_salida = './PDFs/varios.pdf'
+    cant_palabras = 800 #0: toma la lista tal cual, otro numero si es necesario repite
+    generar_fondo = True  #T: Genera letras aleatorias de fondo; F:no
+    en_columnas = False #T: Muestra las referencias en columnas F:las muestra en parrafo
+    # ==========================================================
 ```
 Las cuatro lineas debajo de `-CONFIG-`pueden ser editadas para tomar esos valores siempre sin tener que especificarlos por comandos, incluso una vez establecidos se puede correr sin parametros `sopas.py`y tomará esos valores  
 

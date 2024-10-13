@@ -34,8 +34,7 @@ def generar_sopa(palabras, tam_grilla, fondo = True):
         'diagonal_arriba', 
         'diagonal_arriba_inverso', 
         'diagonal_abajo', 
-        'diagonal_abajo_inverso'
-        
+        'diagonal_abajo_inverso'        
     ]
     # ==========================================================
     ''' ----PLANTILLA----
@@ -186,7 +185,7 @@ def crear_pdf(archivo_pdf, grillas, palabras_por_pagina, tam_grilla, columnas = 
             parrafo = Paragraph(tag_string, style=styles['Normal'])
             elementos.append(parrafo)
             parrafo.wrapOn(pdf, 500, y_offset)
-            parrafo.drawOn(pdf, 50, 20)
+            parrafo.drawOn(pdf, 50, y_offset)
         pdf.showPage()
     
     pdf.save()
@@ -209,9 +208,9 @@ def main(archivo_palabras='list.txt', tam_grilla=20, palabras_por_hoja=20,pdf_sa
     # ===============CONFIGURACION==============================
     archivo_palabras='./lists/varios.txt'
     tam_grilla=32 
-    palabras_por_hoja=40 
+    palabras_por_hoja=60 
     pdf_salida='./PDFs/varios.pdf'
-    cant_palabras = 800 #0: toma la lista tal cual, otro numero si es necesario repite
+    cant_palabras = 1200 #0: toma la lista tal cual, otro numero si es necesario repite
     generar_fondo=True  #T: Genera letras aleatorias de fondo; F:no
     en_columnas = False #T: Muestra las referencias en columnas F:las muestra en parrafo
     # ==========================================================
@@ -234,7 +233,7 @@ def main(archivo_palabras='list.txt', tam_grilla=20, palabras_por_hoja=20,pdf_sa
         grilla = generar_sopa(sub_lista, tam_grilla,generar_fondo)
         grillas.append(grilla)
         palabras_en_hojas.append(sub_lista)    
-    crear_pdf(pdf_salida, grillas, palabras_en_hojas, tam_grilla,en_columnas)
+    crear_pdf(pdf_salida, grillas, palabras_en_hojas, tam_grilla, en_columnas)
     print(f"PDF generado con éxito: \'{pdf_salida}\'")
 
 if __name__ == "__main__":
