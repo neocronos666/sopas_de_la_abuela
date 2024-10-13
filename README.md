@@ -137,5 +137,12 @@ Cada página del PDF generado contiene:
 ## :older_woman: Créditos
 Este proyecto fue creado por [Sergio Silvstri](https://github.com/neocronos666) con amor y dedicación pensando en mi abuela, quien a sus 90 años sigue resolviendo sopas de letras como una forma de mantenerse mentalmente activa y presente en el momento. Para ella, estas sopas son más que un pasatiempo; son una manera de meditar y disfrutar del ahora.
 
+# :muscle: Creditos a terceros
+- >El título del proyecto fue generado con arte ASCII en [patorjk.com](https://patorjk.com/software/taag/#p=display&f=Bulbhead&t=Sopas%20de%20la%20Abuela) usando la fuente "Bulbhead".
+- La lista `castellano.txt`la tomé prestada de [elcastellano.org](https://www.elcastellano.org/lista_alfabetica)
+- Las listas `campo.txt`, `memorias.txt`, `naturaleza.txt` y `varios.txt` las generé usando ChatGPT4.o.
+
+
 ## :ox: Licencia
-Este proyecto está bajo la licencia GPL. Puedes ver más detalles en el archivo LICENSE incluido en este repositorio.
+Este proyecto está bajo la licencia GPL. Puedes ver más detalles en el archivo [LICENSE](LICENSE) incluido en este repositorio.
+
