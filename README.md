@@ -13,6 +13,7 @@ Este proyecto está inspirado en mi abuela, que al día del primer commit tiene 
 
 ![Captura_de_pantalla_2024-10-12_22-23-22.png](/screenshots/Captura_de_pantalla_2024-10-12_22-23-22.png)
 
+# :eight_spoked_asterisk: Si por el momento solo queres bajar algunas sopas de letras y no queres saber nada del desarrolo :point_right: [click aqui](sopas.md) :point_left:
 
 ## :bulb: Características
 - Generación automática de sopas de letras a partir de un archivo .txt.

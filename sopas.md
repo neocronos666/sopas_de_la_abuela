@@ -30,7 +30,7 @@ Para descargar una sopa de letras, simplemente haz clic en el nombre del archivo
 ## 💬 Colaboración
 
 Si encuentras útil este proyecto y deseas colaborar para mejorarlo, ¡sería genial contar con tu apoyo! Puedes contribuir financieramente para ayudarnos a continuar desarrollando y ampliando la colección de sopas de letras. 💖
-
+[Visita mi perfil para enterarte como](https://github.com/neocronos666)
 ---
 
 Gracias por visitar y disfrutar de nuestro proyecto de sopas de letras. ¡Esperamos que encuentres entretenidas estas palabras escondidas! 😊
