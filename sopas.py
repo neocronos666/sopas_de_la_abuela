@@ -206,11 +206,11 @@ def ajustar_lista_palabras(palabras, cantidad):
         return palabras_repetidas[:cantidad]
 def main(archivo_palabras='list.txt', tam_grilla=20, palabras_por_hoja=20,pdf_salida='sopa_de_letras.pdf', cant_palabras=0):
     # ===============CONFIGURACION==============================
-    archivo_palabras='./lists/castellano.txt'
+    archivo_palabras='./lists/rae.txt'
     tam_grilla=32 
-    palabras_por_hoja=60 
-    pdf_salida='./PDFs/241024 Castellano.pdf'
-    cant_palabras = 2000 #0: toma la lista tal cual, otro numero si es necesario repite
+    palabras_por_hoja=50 
+    pdf_salida='./PDFs/241102_FULL_RAE.pdf'
+    cant_palabras = 0 #0: toma la lista tal cual, otro numero si es necesario repite
     generar_fondo=True  #T: Genera letras aleatorias de fondo; F:no
     en_columnas = False #T: Muestra las referencias en columnas F:las muestra en parrafo
     # ==========================================================

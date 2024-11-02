@@ -133,7 +133,33 @@ Cada página del PDF generado contiene:
 2. **Subtitulo**: Con el número de la página.
 3. **Grilla**: Una grilla de letras mayúsculas donde las palabras se distribuyen aleatoriamente según las opciones de dirección.
 4.  **Tabla inferior**: Con las palabras a buscar en la sopa de letras, distribuidas en 4 columnas.
+---
+# :page_with_curl: Herramienta merge_dicc
+Merge_dicc es una herramienta para unir todos los archivos `txt`de un directorio en un solo archivi `txt`. Tiene la capacidad de almacenarlo de manera ordenada alfabeticamente o aleatoria. 
+## Filtrado
+Si el programa encuentra una `,`en una linea toma la parte izquierda de la misma.
+Si el programa encuentra una `-`al principio de la linea omite la linea.
+Estas correciones fueron necesarias para tomar el diccionario completo de la RAE y poder crear la sopa de letras con todas las palabras de la RAE.
 
+## Como utilizarlo?
+
+1. Editar el archivo `merge_dicc.py`, buscando al final las configuraciones:
+```python
+# ------SETUP---------------------------
+input_dir = './lists/RAE/'              # Directorio de donde toma los txt
+output_file = './lists/rae.txt'         # Arrchivo de Salida
+sort_output=False                       # T: Ordena la lista | F:La randomiza
+min_length=5                            # Minimo Tamaño de palabras
+max_length=0                            # Maximo Tamaño (0 toma todas)
+# --------------------------------------
+```
+2. Cambiar los valores de esas variables.
+3. Correr el programa:
+```bash
+python merge_dicc.php
+```
+
+---
 
 ## :older_woman: Créditos
 Este proyecto fue creado por [Sergio Silvstri](https://github.com/neocronos666) con amor y dedicación pensando en mi abuela, quien a sus 90 años sigue resolviendo sopas de letras como una forma de mantenerse mentalmente activa y presente en el momento. Para ella, estas sopas son más que un pasatiempo; son una manera de meditar y disfrutar del ahora.
@@ -142,7 +168,7 @@ Este proyecto fue creado por [Sergio Silvstri](https://github.com/neocronos666) 
 - El título del proyecto fue generado con arte ASCII en [patorjk.com](https://patorjk.com/software/taag/#p=display&f=Bulbhead&t=Sopas%20de%20la%20Abuela) usando la fuente "Bulbhead".
 - La lista `castellano.txt`la tomé prestada de [elcastellano.org](https://www.elcastellano.org/lista_alfabetica)
 - Las listas `campo.txt`, `memorias.txt`, `naturaleza.txt` y `varios.txt` las generé usando ChatGPT4.o.
-
+- Las listas dentro de `lists/RAE/*.txt` y `rae.txt` son de [Guiseppe Dominguez](https://www.giusseppe.net/blog/archivo/2015/10/29/diccionario-de-la-rae-en-modo-texto-plano/)
 
 ## :ox: Licencia
 Este proyecto está bajo la licencia GPL. Puedes ver más detalles en el archivo [LICENSE](LICENSE) incluido en este repositorio.
